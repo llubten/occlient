@@ -7,7 +7,7 @@ ENV PATH=$PATH:/usr/local/bin
 
 ADD include/prune-ocp-projects.sh /usr/local/bin/
 
-RUN curl https://downloads-openshift-console.apps.de3.osh.bgn/amd64/linux/oc.tar | tar -C /usr/local/bin/ -xf - && \
+RUN curl --insecure https://downloads-openshift-console.apps.de3.osh.bgn/amd64/linux/oc.tar | tar -C /usr/local/bin/ -xf - && \
     chmod +x /usr/local/bin/prune-ocp-projects.sh
 
 CMD [ "/usr/local/bin/prune-ocp-projects.sh" ]
