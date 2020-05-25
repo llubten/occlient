@@ -5,8 +5,6 @@ LABEL io.k8s.description="OCP Cleanup" \
 
 ENV PATH=$PATH:/usr/local/bin
 
-ADD include/prune-ocp-projects.sh /usr/local/bin/
-
 RUN env
 RUN NO_PROXY=$NO_PROXY,downloads-openshift-console.apps.de3.osh.bgn
 RUN curl --insecure https://downloads-openshift-console.apps.de3.osh.bgn/amd64/linux/oc.tar | tar -C /usr/local/bin/ -xf - ; \
