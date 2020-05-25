@@ -10,4 +10,4 @@ RUN NO_PROXY=$NO_PROXY,downloads-openshift-console.apps.de3.osh.bgn
 RUN curl --insecure https://downloads-openshift-console.apps.de3.osh.bgn/amd64/linux/oc.tar | tar -C /usr/local/bin/ -xf - ; \
     chmod +x /usr/local/bin/prune-ocp-projects.sh ; ls -rtl /usr/local/bin/ ; /usr/local/bin/oc
 
-CMD [ "/usr/local/bin/prune-ocp-projects.sh" ]
+CMD [ "/usr/local/bin/oc status" ]
